@@ -9,19 +9,18 @@ function formatarDuracao(iso){
     return `${minuto}m${segundos}`
 }
 
-function criarCard(musicas){
+function criarCard(musica){
     const container = document.getElementById("container")
     const card = document.createElement("div")
     card.classList.add("card-musica")
     card.innerHTML = `
-    <h1>${musicas.nome}</h1>
-    <h2>${musicas.duracao}</h2>
-    <p>${musicas.letra}</p>
-    <a href="${musicas.link}">Ouça a música</a>
+    <h1>${musica.nome}</h1>
+    <h2>${formatarDuracao(musica.duracao)}</h2>
+    <p>${musica.letra}</p>
+    <a href="${musica.link}">Ouça a música</a>
     `
     container.appendChild(card)
 }
-
 async function exibirMusicas() {
     const musicas = await getMusicas()
     musicas.forEach(criarCard)
