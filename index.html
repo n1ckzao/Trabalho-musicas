@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer type="module"></script>
-    <title>CRUD front Musicas</title>
+    <title>CRUD de Músicas</title>
 </head>
 <body>
     <header>
-        <img src="/img/logo-Lark.png" alt="">
-        <input type="text" id="nome-musica" placeholder="Digite o nome da música">
-        <button id="nova_musica">Nova Música</button>
+        <div class="logo-container">
+            <img src="/img/Logo-lark.png" alt="Logo do Lark Player">
+        </div>
+        <div class="search-container">
+            <input type="text" id="nome-musica" placeholder="Digite o nome da música">
+            <button id="nova_musica">Adicionar Música</button>
+        </div>
     </header>
     <main>
-        <div class="container" id="container">
-        </div>
+        <div class="container" id="container"></div>
     </main>
 </body>
 </html>
